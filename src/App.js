@@ -1,11 +1,17 @@
 import React, {Component} from "react";
 import './App.css';
-import Counter from "./Counter";
+import PhoneForm from "./components/PhoneForm";
 
 class App extends Component {
+  handleCreate = (data) => {
+    console.log(data);
+  }
+
   render() {
     return (
-        <Counter/>
+      <PhoneForm>
+        onCreate={this.handleCreate}
+      </PhoneForm>
     );
   }
 }
